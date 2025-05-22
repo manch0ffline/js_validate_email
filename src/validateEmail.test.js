@@ -41,8 +41,8 @@ describe(`Function 'validateEmail':`, () => {
     expect(result).toBe(false);
   });
 
-  it('should return 422 if email contains forbidden characters', () => {
-    const result = validateEmail('тест@exam ple.com', 'P@ssword1!');
+  it('should return "false" if email contains forbidden characters', () => {
+    const result = validateEmail('тест@exam ple.com');
 
     expect(result).toBe(false);
   });
